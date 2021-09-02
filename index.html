@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>হুনর প্রজেক্ট</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body class="mx-5">
+    <header class="m-5">
+        <h1 class="text-primary text-center fw-bold mt-3">Book are my first choice !!</h1>
+        <p class="text-secondary text-center fs-5">"বই সবচেয়ে ভালো বন্ধু! <br>
+            যার সাথে কখনও ঝগড়া হয় না, এমনকি মনোমালিন্যও হয় না। "</p>
+    </header>
+
+    <main>
+        <!-- input field section  -->
+        <section>
+            <div class="container">
+                <form class="col-md-6 m-auto py-5">
+                    <div class="input-group mb-2">
+                        <input id="inputField" type="text" class="form-control"
+                            placeholder="আপনার পছন্দের বইটি বেছে নিন ...">
+                        <div class="input-group-append">
+                            <button onclick="search()" type="button"
+                                class="btn btn-success px-4 p-2 fw-bold">Search</button>
+                        </div>
+                    </div>
+                    <p><span class="text-secondary" id="found"></span></p>
+                </form>
+        </section>
+
+        <!-- book list  -->
+        <section>
+            <div id="bookCard" class="row row-cols-1 row-cols-md-3 g-4">
+            </div>
+        </section>
+
+        <!-- loadding sppiner  -->
+        <div style="visibility: hidden" id="sppiner" class="d-flex justify-content-center">
+            <div class="spinner-border text-primary fw-bold" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+        <!-- display error message  -->
+        <section>
+            <div style="display:none" id="error" class="text-center d-gri">
+                <h4 class="my-5 d-flex justify-content-center text-danger">আপনার বইয়ের নামটি ভুল আছে হয়তো!! <br> পুনরায়
+                    সঠিক নামটি লিখুন। </h4>
+            </div>
+            <div style="display:none" id="emptyInput" class="text-center d-gri">
+                <h3 class="my-5 d-flex justify-content-center text-danger">অনুগ্রহ করে বইয়ের নাম লিখুন! </h3>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="scre.js"></script>
+</body>
+
+</html>
